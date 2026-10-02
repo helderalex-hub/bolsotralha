@@ -1,26 +1,337 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bolsotralha — Sátira Política</title>
-<meta name="description" content="Bolsotralha — sátira política em formato de gibi, com caricaturas e uma área separada para fatos e fontes.">
-<style>
-:root{--red:#e52521;--yellow:#ffd51b;--blue:#071a2e;--paper:#fff7df;--ink:#111;--white:#fff;--muted:#5f5a4e}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-header{background:var(--blue);color:white;position:sticky;top:0;z-index:10;border-bottom:5px solid var(--yellow)}
-.nav{max-width:1160px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:1000;font-size:28px;letter-spacing:-1px;color:var(--yellow);text-shadow:3px 3px 0 var(--red)}
-nav a{color:#fff;text-decoration:none;font-weight:900;margin-left:20px}nav a:hover{color:var(--yellow)}
-.hero{max-width:1160px;margin:28px auto;padding:0 20px}.hero img{width:100%;display:block;border:7px solid var(--ink);box-shadow:12px 12px 0 var(--red)}
-.hero-copy{margin-top:28px;display:grid;grid-template-columns:1.5fr 1fr;gap:22px;align-items:stretch}.hero-copy article,.hero-copy aside{border:5px solid var(--ink);padding:24px;background:#fff;box-shadow:8px 8px 0 var(--blue)}.hero-copy aside{background:var(--yellow)}
-h1{font-size:clamp(42px,7vw,76px);line-height:.88;margin:0 0 15px;text-transform:uppercase}.hero-copy p{font-size:19px;line-height:1.45;margin:0}.cta{display:inline-block;margin-top:18px;background:var(--red);color:white;padding:12px 18px;text-decoration:none;font-weight:1000;border:4px solid var(--ink)}
-.section{max-width:1160px;margin:78px auto;padding:0 20px}.burst{display:inline-block;background:var(--yellow);border:5px solid var(--ink);padding:8px 18px;font-weight:1000;transform:rotate(-2deg);font-size:15px}.section h2{font-size:44px;line-height:.95;margin:18px 0 12px;text-transform:uppercase}.intro{font-size:19px;max-width:820px;line-height:1.5}
-.parent{background:var(--blue);color:#fff;box-shadow:8px 8px 0 var(--red);border:5px solid var(--ink);padding:22px;margin:28px 0}.parent .num{color:var(--yellow)}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}.card{background:white;border:5px solid var(--ink);padding:20px;box-shadow:7px 7px 0 var(--blue);position:relative}.num{font-size:48px;font-weight:1000;color:var(--red);line-height:1}.card h3{margin:4px 0 8px;font-size:24px}.card p{line-height:1.4;margin:0}.tag{display:inline-block;margin-top:14px;padding:5px 8px;background:var(--yellow);border:2px solid var(--ink);font-size:12px;font-weight:900}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.tile{background:white;border:5px solid var(--ink);padding:10px;box-shadow:7px 7px 0 var(--red)}.tile img{width:100%;display:block}.tile b{display:block;padding:10px 4px 4px;font-size:17px}
-.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}.fact{background:#fff;border:5px solid var(--ink);padding:20px;box-shadow:6px 6px 0 var(--blue)}.fact h3{font-size:24px;margin:0 0 8px}.fact p{line-height:1.5;margin:0 0 12px}.source{font-size:13px;font-weight:800}.source a{color:var(--red)}
-.note{background:#fff;border:4px dashed var(--ink);padding:18px;line-height:1.5;margin-top:25px}.note strong{color:var(--red)}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-footer{margin-top:80px;background:var(--blue);color:white;padding:38px 20px;text-align:center;border-top:6px solid var(--yellow)}
+<title>Bolsotralha — Sátira Política</title>
+
+<meta name="description" content="Bolsotralha — sátira política em formato de gibi, com caricaturas e uma área separada para fatos e fontes.">
+
+<style>
+
+:root{
+--red:#e52521;
+--yellow:#ffd51b;
+--blue:#071a2e;
+--paper:#fff7df;
+--ink:#111;
+--white:#fff;
+--muted:#5f5a4e
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:var(--paper);
+color:var(--ink);
+font-family:Arial,Helvetica,sans-serif
+}
+
+header{
+background:var(--blue);
+color:white;
+position:sticky;
+top:0;
+z-index:10;
+border-bottom:5px solid var(--yellow)
+}
+
+.nav{
+max-width:1160px;
+margin:auto;
+padding:13px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.logo{
+font-weight:1000;
+font-size:28px;
+letter-spacing:-1px;
+color:var(--yellow);
+text-shadow:3px 3px 0 var(--red)
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:900;
+margin-left:20px
+}
+
+nav a:hover{
+color:var(--yellow)
+}
+
+.hero{
+max-width:1160px;
+margin:28px auto;
+padding:0 20px
+}
+
+.hero img{
+width:100%;
+display:block;
+border:7px solid var(--ink);
+box-shadow:12px 12px 0 var(--red)
+}
+
+.hero-copy{
+margin-top:28px;
+display:grid;
+grid-template-columns:1.5fr 1fr;
+gap:22px;
+align-items:stretch
+}
+
+.hero-copy article,
+.hero-copy aside{
+border:5px solid var(--ink);
+padding:24px;
+background:#fff;
+box-shadow:8px 8px 0 var(--blue)
+}
+
+.hero-copy aside{
+background:var(--yellow)
+}
+
+h1{
+font-size:clamp(42px,7vw,76px);
+line-height:.88;
+margin:0 0 15px;
+text-transform:uppercase
+}
+
+.hero-copy p{
+font-size:19px;
+line-height:1.45;
+margin:0
+}
+
+.cta{
+display:inline-block;
+margin-top:18px;
+background:var(--red);
+color:white;
+padding:12px 18px;
+text-decoration:none;
+font-weight:1000;
+border:4px solid var(--ink)
+}
+
+.section{
+max-width:1160px;
+margin:78px auto;
+padding:0 20px
+}
+
+.burst{
+display:inline-block;
+background:var(--yellow);
+border:5px solid var(--ink);
+padding:8px 18px;
+font-weight:1000;
+transform:rotate(-2deg);
+font-size:15px
+}
+
+.section h2{
+font-size:44px;
+line-height:.95;
+margin:18px 0 12px;
+text-transform:uppercase
+}
+
+.intro{
+font-size:19px;
+max-width:820px;
+line-height:1.5
+}
+
+.parent{
+background:var(--blue);
+color:#fff;
+box-shadow:8px 8px 0 var(--red);
+border:5px solid var(--ink);
+padding:22px;
+margin:28px 0
+}
+
+.parent .num{
+color:var(--yellow)
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+margin-top:20px
+}
+
+.card{
+background:white;
+border:5px solid var(--ink);
+padding:20px;
+box-shadow:7px 7px 0 var(--blue);
+position:relative
+}
+
+.num{
+font-size:48px;
+font-weight:1000;
+color:var(--red);
+line-height:1
+}
+
+.card h3{
+margin:4px 0 8px;
+font-size:24px
+}
+
+.card p{
+line-height:1.4;
+margin:0
+}
+
+.tag{
+display:inline-block;
+margin-top:14px;
+padding:5px 8px;
+background:var(--yellow);
+border:2px solid var(--ink);
+font-size:12px;
+font-weight:900
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.tile{
+background:white;
+border:5px solid var(--ink);
+padding:10px;
+box-shadow:7px 7px 0 var(--red)
+}
+
+.tile img{
+width:100%;
+display:block
+}
+
+.tile b{
+display:block;
+padding:10px 4px 4px;
+font-size:17px
+}
+
+.facts{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+margin-top:28px
+}
+
+.fact{
+background:#fff;
+border:5px solid var(--ink);
+padding:20px;
+box-shadow:6px 6px 0 var(--blue)
+}
+
+.fact h3{
+font-size:24px;
+margin:0 0 8px
+}
+
+.fact p{
+line-height:1.5;
+margin:0 0 12px
+}
+
+.source{
+font-size:13px;
+font-weight:800
+}
+
+.source a{
+color:var(--red)
+}
+
+.note{
+background:#fff;
+border:4px dashed var(--ink);
+padding:18px;
+line-height:1.5;
+margin-top:25px
+}
+
+.note strong{
+color:var(--red)
+}
+
+
+/* CURTIDAS */
+
+.like-section{
+max-width:1160px;
+margin:42px auto 0;
+padding:0 20px;
+text-align:center
+}
+
+.like-button{
+background:var(--yellow);
+color:var(--ink);
+border:5px solid var(--ink);
+padding:12px 20px;
+font-size:18px;
+font-weight:1000;
+cursor:pointer;
+box-shadow:7px 7px 0 var(--red);
+transition:transform .1s,box-shadow .1s
+}
+
+.like-button:hover{
+transform:translate(2px,2px);
+box-shadow:5px 5px 0 var(--red)
+}
+
+.like-button.liked{
+background:var(--red);
+color:white
+}
+
+.like-button:disabled{
+opacity:.7;
+cursor:default
+}
+
+.like-count{
+margin-top:14px;
+font-weight:900;
+font-size:16px
+}
+
+
+/* RODAPÉ */
+
+footer{
+margin-top:80px;
+background:var(--blue);
+color:white;
+padding:38px 20px;
+text-align:center;
+border-top:6px solid var(--yellow)
+}
 
 .visitor-counter{
 display:inline-block;
@@ -28,203 +339,824 @@ margin-bottom:16px;
 padding:9px 14px;
 border:3px solid var(--yellow);
 font-weight:900;
-font-size:15px;
+font-size:15px
 }
 
-@media(max-width:850px){nav{display:none}.hero-copy{grid-template-columns:1fr}.grid,.facts{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:1fr}.section h2{font-size:36px}}
-@media(max-width:520px){.grid,.facts{grid-template-columns:1fr}.logo{font-size:23px}.hero{margin-top:18px}.hero-copy article,.hero-copy aside{padding:18px}}
+
+/* RESPONSIVO */
+
+@media(max-width:850px){
+
+nav{
+display:none
+}
+
+.hero-copy{
+grid-template-columns:1fr
+}
+
+.grid,
+.facts{
+grid-template-columns:repeat(2,1fr)
+}
+
+.gallery{
+grid-template-columns:1fr
+}
+
+.section h2{
+font-size:36px
+}
+
+}
+
+@media(max-width:520px){
+
+.grid,
+.facts{
+grid-template-columns:1fr
+}
+
+.logo{
+font-size:23px
+}
+
+.hero{
+margin-top:18px
+}
+
+.hero-copy article,
+.hero-copy aside{
+padding:18px
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
+
 <header>
+
 <div class="nav">
-<div class="logo">BOLSOTRALHA</div>
+
+<div class="logo">
+BOLSOTRALHA
+</div>
+
 <nav>
 <a href="#familia">A Família</a>
 <a href="#galeria">Galeria</a>
 <a href="#fatos">Conheça os fatos</a>
 <a href="#sobre">Sobre</a>
 </nav>
+
 </div>
+
 </header>
+
 
 <main>
 
+
 <section class="hero">
-<img src="assets/bolsotralha-capa.png" alt="Capa satírica A Família Bolsotralha diante do cofre do povo">
+
+<img
+src="assets/bolsotralha-capa.png"
+alt="Capa satírica A Família Bolsotralha diante do cofre do povo"
+>
 
 <div class="hero-copy">
+
 <article>
-<h1>A Família<br>Bolsotralha</h1>
-<p>Um gibi político sobre uma família que parece sempre estar de olho no cofre. <b>Humor, caricatura e crítica.</b></p>
-<a class="cta" href="#galeria">VER A GALERIA →</a>
+
+<h1>
+A Família<br>
+Bolsotralha
+</h1>
+
+<p>
+Um gibi político sobre uma família que parece sempre estar de olho no cofre.
+<b>Humor, caricatura e crítica.</b>
+</p>
+
+<a class="cta" href="#galeria">
+VER A GALERIA →
+</a>
+
 </article>
 
+
 <aside>
+
 <b>COMO LER</b>
-<p style="margin-top:10px">A caricatura é opinião e sátira. Quando houver informação sobre fatos públicos, ela aparece em uma área separada, com contexto e fonte.</p>
+
+<p style="margin-top:10px">
+A caricatura é opinião e sátira. Quando houver informação sobre fatos públicos,
+ela aparece em uma área separada, com contexto e fonte.
+</p>
+
 </aside>
+
 </div>
+
 </section>
+
+
+<!-- CURTIDAS -->
+
+<section class="like-section">
+
+<button
+id="likeButton"
+class="like-button"
+type="button"
+>
+
+👍 <span id="likeLabel">
+Curtir Bolsotralha
+</span>
+
+</button>
+
+<div class="like-count">
+
+<span id="likeCount">—</span> curtidas
+
+</div>
+
+</section>
+
 
 <section class="section" id="familia">
-<span class="burst">EDIÇÃO Nº 01</span>
-<h2>Conheça a família</h2>
-<p class="intro">Os personagens são uma construção satírica inspirada em figuras públicas reais. Os números 01–04 seguem a forma como os filhos de Jair Bolsonaro são frequentemente identificados publicamente.</p>
+
+<span class="burst">
+EDIÇÃO Nº 01
+</span>
+
+<h2>
+Conheça a família
+</h2>
+
+<p class="intro">
+Os personagens são uma construção satírica inspirada em figuras públicas reais.
+Os números 01–04 seguem a forma como os filhos de Jair Bolsonaro são frequentemente identificados publicamente.
+</p>
+
 
 <div class="parent">
-<div class="num">O PAI</div>
-<h3>O Chefe</h3>
-<p>O patriarca da quadrilha: tenta comandar a operação enquanto os quatro filhos fazem a maior confusão ao redor do cofre.</p>
+
+<div class="num">
+O PAI
 </div>
+
+<h3>
+O Chefe
+</h3>
+
+<p>
+O patriarca da quadrilha: tenta comandar a operação enquanto os quatro filhos
+fazem a maior confusão ao redor do cofre.
+</p>
+
+</div>
+
 
 <div class="grid">
-<div class="card"><div class="num">01</div><h3>Flávio</h3><p>O primogênito da família e senador pelo Rio de Janeiro.</p><span class="tag">PERSONAGEM</span></div>
-<div class="card"><div class="num">02</div><h3>Carlos</h3><p>O segundo filho, vereador do Rio de Janeiro.</p><span class="tag">PERSONAGEM</span></div>
-<div class="card"><div class="num">03</div><h3>Eduardo</h3><p>O terceiro filho e ex-deputado federal por São Paulo.</p><span class="tag">PERSONAGEM</span></div>
-<div class="card"><div class="num">04</div><h3>Jair Renan</h3><p>O filho mais novo, vereador de Balneário Camboriú.</p><span class="tag">PERSONAGEM</span></div>
+
+
+<div class="card">
+
+<div class="num">
+01
 </div>
+
+<h3>
+Flávio
+</h3>
+
+<p>
+O primogênito da família e senador pelo Rio de Janeiro.
+</p>
+
+<span class="tag">
+PERSONAGEM
+</span>
+
+</div>
+
+
+<div class="card">
+
+<div class="num">
+02
+</div>
+
+<h3>
+Carlos
+</h3>
+
+<p>
+O segundo filho, vereador do Rio de Janeiro.
+</p>
+
+<span class="tag">
+PERSONAGEM
+</span>
+
+</div>
+
+
+<div class="card">
+
+<div class="num">
+03
+</div>
+
+<h3>
+Eduardo
+</h3>
+
+<p>
+O terceiro filho e ex-deputado federal por São Paulo.
+</p>
+
+<span class="tag">
+PERSONAGEM
+</span>
+
+</div>
+
+
+<div class="card">
+
+<div class="num">
+04
+</div>
+
+<h3>
+Jair Renan
+</h3>
+
+<p>
+O filho mais novo, vereador de Balneário Camboriú.
+</p>
+
+<span class="tag">
+PERSONAGEM
+</span>
+
+</div>
+
+
+</div>
+
 </section>
+
 
 <section class="section" id="galeria">
-<span class="burst">QUADRINHOS</span>
-<h2>Galeria</h2>
-<p class="intro">A primeira capa da coleção. A ideia é transformar acontecimentos e personagens da política em uma série de capas, tirinhas e carrosséis.</p>
+
+<span class="burst">
+QUADRINHOS
+</span>
+
+<h2>
+Galeria
+</h2>
+
+<p class="intro">
+A primeira capa da coleção. A ideia é transformar acontecimentos e personagens
+da política em uma série de capas, tirinhas e carrosséis.
+</p>
 
 <div class="gallery">
+
 <div class="tile">
-<img src="assets/bolsotralha-capa.png" alt="A Família Bolsotralha — O Cofre do Povo">
-<b>A Família Bolsotralha — O Cofre do Povo</b>
+
+<img
+src="assets/bolsotralha-capa.png"
+alt="A Família Bolsotralha — O Cofre do Povo"
+>
+
+<b>
+A Família Bolsotralha — O Cofre do Povo
+</b>
+
 </div>
+
 </div>
+
 </section>
 
+
 <section class="section" id="fatos">
-<span class="burst">SEM MÁSCARA</span>
-<h2>Conheça os fatos</h2>
-<p class="intro">Aqui a regra é diferente: menos piada, mais documentação. Os links abaixo apontam para páginas institucionais ou fontes jornalísticas usadas para conferir informações públicas.</p>
+
+<span class="burst">
+SEM MÁSCARA
+</span>
+
+<h2>
+Conheça os fatos
+</h2>
+
+<p class="intro">
+Aqui a regra é diferente: menos piada, mais documentação.
+Os links abaixo apontam para páginas institucionais ou fontes jornalísticas
+usadas para conferir informações públicas.
+</p>
+
 
 <div class="facts">
 
-<div class="fact">
-<h3>01 — Flávio Bolsonaro</h3>
-<p>O Senado registra Flávio Nantes Bolsonaro como senador pelo Rio de Janeiro, com mandato de 2019 a 2027.</p>
-<div class="source"><a href="https://www25.senado.leg.br/pt_BR/web/senadores/senador/-/perfil/5894" target="_blank" rel="noopener">Fonte: Senado Federal ↗</a></div>
-</div>
 
 <div class="fact">
-<h3>02 — Carlos Bolsonaro</h3>
-<p>Registros da Câmara Municipal do Rio de Janeiro identificam Carlos Nantes Bolsonaro como vereador e presidente da sessão de instalação da legislatura 2025–2028.</p>
-<div class="source"><a href="https://dcmdigital.camara.rj.gov.br/download/BFB4B9963AD7B9122C7C125483C80D00" target="_blank" rel="noopener">Fonte: Câmara Municipal do Rio de Janeiro ↗</a></div>
-</div>
 
-<div class="fact">
-<h3>03 — Eduardo Bolsonaro</h3>
-<p>A Câmara dos Deputados informa que Eduardo Bolsonaro não estava em exercício em 2026 e mantém o histórico de sua atuação parlamentar.</p>
-<div class="source"><a href="https://www.camara.leg.br/deputados/92346" target="_blank" rel="noopener">Fonte: Câmara dos Deputados ↗</a></div>
-</div>
+<h3>
+01 — Flávio Bolsonaro
+</h3>
 
-<div class="fact">
-<h3>04 — Jair Renan Bolsonaro</h3>
-<p>Fontes públicas registram Jair Renan Valle Bolsonaro como vereador de Balneário Camboriú; em 2026 ele também entrou no processo eleitoral para deputado federal em Santa Catarina.</p>
+<p>
+O Senado registra Flávio Nantes Bolsonaro como senador pelo Rio de Janeiro,
+com mandato de 2019 a 2027.
+</p>
+
 <div class="source">
-<a href="https://www.balneariocamboriu.sc.leg.br/" target="_blank" rel="noopener">Fonte institucional: Câmara de Balneário Camboriú ↗</a> ·
-<a href="https://noticias.uol.com.br/politica/ultimas-noticias/2026/07/05/jair-renan-bolsonaro-anuncia-pre-candidatura-a-deputado-federal-por-sc.amp.htm" target="_blank" rel="noopener">Contexto: UOL ↗</a>
-</div>
+
+<a
+href="https://www25.senado.leg.br/pt_BR/web/senadores/senador/-/perfil/5894"
+target="_blank"
+rel="noopener"
+>
+Fonte: Senado Federal ↗
+</a>
+
 </div>
 
 </div>
+
+
+<div class="fact">
+
+<h3>
+02 — Carlos Bolsonaro
+</h3>
+
+<p>
+Registros da Câmara Municipal do Rio de Janeiro identificam Carlos Nantes Bolsonaro
+como vereador e presidente da sessão de instalação da legislatura 2025–2028.
+</p>
+
+<div class="source">
+
+<a
+href="https://dcmdigital.camara.rj.gov.br/download/BFB4B9963AD7B9122C7C125483C80D00"
+target="_blank"
+rel="noopener"
+>
+Fonte: Câmara Municipal do Rio de Janeiro ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="fact">
+
+<h3>
+03 — Eduardo Bolsonaro
+</h3>
+
+<p>
+A Câmara dos Deputados informa que Eduardo Bolsonaro não estava em exercício
+em 2026 e mantém o histórico de sua atuação parlamentar.
+</p>
+
+<div class="source">
+
+<a
+href="https://www.camara.leg.br/deputados/92346"
+target="_blank"
+rel="noopener"
+>
+Fonte: Câmara dos Deputados ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="fact">
+
+<h3>
+04 — Jair Renan Bolsonaro
+</h3>
+
+<p>
+Fontes públicas registram Jair Renan Valle Bolsonaro como vereador de
+Balneário Camboriú; em 2026 ele também entrou no processo eleitoral para
+deputado federal em Santa Catarina.
+</p>
+
+<div class="source">
+
+<a
+href="https://www.balneariocamboriu.sc.leg.br/"
+target="_blank"
+rel="noopener"
+>
+Fonte institucional: Câmara de Balneário Camboriú ↗
+</a>
+
+·
+
+<a
+href="https://noticias.uol.com.br/politica/ultimas-noticias/2026/07/05/jair-renan-bolsonaro-anuncia-pre-candidatura-a-deputado-federal-por-sc.amp.htm"
+target="_blank"
+rel="noopener"
+>
+Contexto: UOL ↗
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
 
 <div class="note">
-<strong>Regra editorial:</strong> uma caricatura pode exagerar, ironizar e provocar. Uma afirmação factual precisa de fonte. Alegações sobre crimes, investigações ou irregularidades só devem aparecer quando o site apresentar o que foi alegado, por quem, em qual momento e qual foi o desfecho conhecido.
+
+<strong>
+Regra editorial:
+</strong>
+
+uma caricatura pode exagerar, ironizar e provocar.
+Uma afirmação factual precisa de fonte.
+Alegações sobre crimes, investigações ou irregularidades só devem aparecer
+quando o site apresentar o que foi alegado, por quem, em qual momento
+e qual foi o desfecho conhecido.
+
 </div>
+
 </section>
+
 
 <section class="section" id="sobre">
-<span class="burst">SOBRE O PROJETO</span>
-<h2>Sátira é sátira</h2>
+
+<span class="burst">
+SOBRE O PROJETO
+</span>
+
+<h2>
+Sátira é sátira
+</h2>
+
 <div class="note">
-<strong>Bolsotralha é um projeto de sátira política.</strong> Os personagens e cenas são caricaturas. O objetivo é comentar a vida pública por meio de humor e linguagem de quadrinhos. A seção “Conheça os fatos” existe justamente para separar a criação satírica da informação documentada.
+
+<strong>
+Bolsotralha é um projeto de sátira política.
+</strong>
+
+Os personagens e cenas são caricaturas.
+O objetivo é comentar a vida pública por meio de humor e linguagem de quadrinhos.
+A seção “Conheça os fatos” existe justamente para separar a criação satírica
+da informação documentada.
+
 </div>
+
 </section>
+
 
 </main>
 
+
 <footer>
 
-<div class="visitor-counter" aria-live="polite">
-👁️ <span id="visitorCount">—</span> visitantes
+
+<div
+class="visitor-counter"
+aria-live="polite"
+>
+
+👁️ <span id="visitorCount">—</span>
+visitantes
+
 </div>
 
-<div>© 2026 Bolsotralha · Sátira política em formato de gibi</div>
+
+<div>
+© 2026 Bolsotralha · Sátira política em formato de gibi
+</div>
+
 
 </footer>
 
+
+<!-- CONTADOR DE VISITANTES -->
+
 <script>
+
 (function () {
 
-const SUPABASE_URL = "https://lmipqyajmzmqnrkktuhp.supabase.co";
-const SUPABASE_KEY = "sb_publishable_Be6JQfGEb7FJ77p91NXR9g_7UWx2WZw";
+const SUPABASE_URL =
+"https://lmipqyajmzmqnrkktuhp.supabase.co";
 
-const countEl = document.getElementById("visitorCount");
+const SUPABASE_KEY =
+"sb_publishable_Be6JQfGEb7FJ77p91NXR9g_7UWx2WZw";
+
+const countEl =
+document.getElementById("visitorCount");
+
 
 async function callRpc(functionName) {
 
 const response = await fetch(
-SUPABASE_URL + "/rest/v1/rpc/" + functionName,
+
+SUPABASE_URL +
+"/rest/v1/rpc/" +
+functionName,
+
 {
-method: "POST",
-headers: {
-"apikey": SUPABASE_KEY,
-"Authorization": "Bearer " + SUPABASE_KEY,
-"Content-Type": "application/json"
+
+method:"POST",
+
+headers:{
+
+"apikey":SUPABASE_KEY,
+
+"Authorization":
+"Bearer " + SUPABASE_KEY,
+
+"Content-Type":
+"application/json"
+
 },
-body: "{}"
+
+body:"{}"
+
 }
+
 );
 
-if (!response.ok) {
-throw new Error("Supabase RPC error: " + response.status);
+
+if(!response.ok){
+
+throw new Error(
+"Supabase RPC error: " +
+response.status
+);
+
 }
+
 
 return response.json();
 
 }
 
-async function updateVisitorCounter() {
 
-try {
+async function updateVisitorCounter(){
 
-const visitKey = "bolsotralha_visitor_counted_v1";
+try{
 
-if (!localStorage.getItem(visitKey)) {
+const visitKey =
+"bolsotralha_visitor_counted_v1";
 
-await callRpc("increment_visitor_count");
 
-localStorage.setItem(visitKey, "1");
+if(!localStorage.getItem(visitKey)){
 
-}
+await callRpc(
+"increment_visitor_count"
+);
 
-const count = await callRpc("get_visitor_count");
-
-countEl.textContent = Number(count).toLocaleString("pt-BR");
-
-} catch (error) {
-
-console.warn("Visitor counter unavailable:", error);
-
-countEl.textContent = "—";
+localStorage.setItem(
+visitKey,
+"1"
+);
 
 }
 
+
+const count =
+await callRpc(
+"get_visitor_count"
+);
+
+
+countEl.textContent =
+Number(count).toLocaleString("pt-BR");
+
+
+}catch(error){
+
+console.warn(
+"Visitor counter unavailable:",
+error
+);
+
+countEl.textContent="—";
+
 }
+
+}
+
 
 updateVisitorCounter();
 
 })();
+
 </script>
+
+
+<!-- CONTADOR DE CURTIDAS -->
+
+<script>
+
+(function () {
+
+
+const SUPABASE_URL =
+"https://lmipqyajmzmqnrkktuhp.supabase.co";
+
+
+const SUPABASE_KEY =
+"sb_publishable_Be6JQfGEb7FJ77p91NXR9g_7UWx2WZw";
+
+
+const likeButton =
+document.getElementById("likeButton");
+
+
+const likeLabel =
+document.getElementById("likeLabel");
+
+
+const likeCount =
+document.getElementById("likeCount");
+
+
+const likeKey =
+"bolsotralha_liked_v1";
+
+
+async function callLikeRpc(functionName){
+
+const response =
+await fetch(
+
+SUPABASE_URL +
+"/rest/v1/rpc/" +
+functionName,
+
+{
+
+method:"POST",
+
+headers:{
+
+"apikey":SUPABASE_KEY,
+
+"Authorization":
+"Bearer " + SUPABASE_KEY,
+
+"Content-Type":
+"application/json"
+
+},
+
+body:"{}"
+
+}
+
+);
+
+
+if(!response.ok){
+
+throw new Error(
+"Supabase RPC error: " +
+response.status
+);
+
+}
+
+
+return response.json();
+
+}
+
+
+async function loadLikeCount(){
+
+try{
+
+const count =
+await callLikeRpc(
+"get_like_count"
+);
+
+
+likeCount.textContent =
+Number(count).toLocaleString("pt-BR");
+
+
+if(
+localStorage.getItem(likeKey)
+){
+
+likeButton.classList.add("liked");
+
+likeLabel.textContent =
+"Curtido";
+
+}
+
+}catch(error){
+
+console.warn(
+"Like counter unavailable:",
+error
+);
+
+likeCount.textContent =
+"—";
+
+}
+
+}
+
+
+likeButton.addEventListener(
+"click",
+async function(){
+
+if(
+localStorage.getItem(likeKey)
+){
+
+return;
+
+}
+
+
+likeButton.disabled=true;
+
+
+try{
+
+const count =
+await callLikeRpc(
+"increment_like_count"
+);
+
+
+likeCount.textContent =
+Number(count).toLocaleString("pt-BR");
+
+
+localStorage.setItem(
+likeKey,
+"1"
+);
+
+
+likeButton.classList.add(
+"liked"
+);
+
+
+likeLabel.textContent =
+"Curtido";
+
+
+}catch(error){
+
+console.warn(
+"Unable to register like:",
+error
+);
+
+}finally{
+
+likeButton.disabled=false;
+
+}
+
+});
+
+
+loadLikeCount();
+
+
+})();
+
+</script>
+
 
 </body>
 </html>
