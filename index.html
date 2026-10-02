@@ -56,6 +56,15 @@ header{
   text-shadow:3px 3px 0 var(--red)
 }
 
+/* DATA DA EDIÇÃO */
+.edition-date{
+  color:#fff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+  margin-top:4px
+}
+
 nav a{
   color:#fff;
   text-decoration:none;
@@ -232,6 +241,15 @@ h1{
   font-size:17px
 }
 
+/* DATA DE PUBLICAÇÃO */
+.tile small{
+  display:block;
+  padding:0 4px 8px;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700
+}
+
 .facts{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -277,7 +295,6 @@ h1{
   color:var(--red)
 }
 
-
 /* CURTIDAS */
 
 .like-section{
@@ -320,7 +337,6 @@ h1{
   font-size:16px
 }
 
-
 /* RODAPÉ */
 
 footer{
@@ -340,7 +356,6 @@ footer{
   font-weight:900;
   font-size:15px
 }
-
 
 /* RESPONSIVO */
 
@@ -400,8 +415,14 @@ footer{
 
 <div class="nav">
 
-<div class="logo">
-BOLSOTRALHA
+<div>
+  <div class="logo">
+    BOLSOTRALHA
+  </div>
+
+  <div class="edition-date">
+    EDIÇÃO DE 03 DE OUTUBRO DE 2026
+  </div>
 </div>
 
 <nav>
@@ -605,6 +626,10 @@ alt="A Família Bolsotralha — O Cofre do Povo"
 <b>
 A Família Bolsotralha — O Cofre do Povo
 </b>
+
+<small>
+Publicado em 03 de outubro de 2026
+</small>
 
 </div>
 
@@ -833,9 +858,11 @@ body:"{}"
 );
 
 if(!response.ok){
+
 throw new Error(
 "Supabase RPC error: " + response.status
 );
+
 }
 
 return response.json();
@@ -895,7 +922,7 @@ const SUPABASE_URL =
 "https://lmipqyajmzmqnrkktuhp.supabase.co";
 
 const SUPABASE_KEY =
-"sb_publishable_Be6JQfGEb7FJ77p91NXR9g_7UWx2WZw";
+"sb_publishable_Be6JQfGEb7F77p91NXR9g_7UWx2WZw";
 
 const likeButton =
 document.getElementById("likeButton");
@@ -929,9 +956,11 @@ body:"{}"
 );
 
 if(!response.ok){
+
 throw new Error(
 "Supabase RPC error: " + response.status
 );
+
 }
 
 return response.json();
@@ -1016,6 +1045,7 @@ loadLikeCount();
 })();
 
 </script>
+
 
 </body>
 </html>
