@@ -8,6 +8,19 @@
 
 <meta name="description" content="Bolsotralha — sátira política em formato de gibi, com caricaturas e uma área separada para fatos e fontes.">
 
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bolsotralha — Sátira Política">
+<meta property="og:description" content="Bolsotralha — sátira política em formato de gibi, com caricaturas e uma área separada para fatos e fontes.">
+<meta property="og:url" content="https://bolsotralha.com.br/">
+<meta property="og:image" content="https://bolsotralha.com.br/assets/bolsotralha-capa.png">
+<meta property="og:image:alt" content="Capa satírica A Família Bolsotralha diante do cofre do povo">
+<meta property="og:locale" content="pt_BR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bolsotralha — Sátira Política">
+<meta name="twitter:description" content="Bolsotralha — sátira política em formato de gibi, com caricaturas e uma área separada para fatos e fontes.">
+<meta name="twitter:image" content="https://bolsotralha.com.br/assets/bolsotralha-capa.png">
+
 <style>
 :root{
   --red:#e52521;
@@ -56,7 +69,6 @@ header{
   text-shadow:3px 3px 0 var(--red)
 }
 
-/* DATA DA EDIÇÃO */
 .edition-date{
   color:#fff;
   font-size:12px;
@@ -241,7 +253,6 @@ h1{
   font-size:17px
 }
 
-/* DATA DE PUBLICAÇÃO */
 .tile small{
   display:block;
   padding:0 4px 8px;
@@ -293,6 +304,55 @@ h1{
 
 .note strong{
   color:var(--red)
+}
+
+/* DISTRIBUIÇÃO */
+
+.header-share{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:6px;
+  margin-top:7px;
+  flex-wrap:wrap
+}
+
+.header-share-label{
+  color:#fff;
+  font-size:11px;
+  font-weight:1000;
+  letter-spacing:.7px;
+  margin-right:2px
+}
+
+.share-link,
+.copy-link-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:30px;
+  padding:5px 9px;
+  border:2px solid var(--yellow);
+  background:transparent;
+  color:#fff;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:1000;
+  cursor:pointer;
+  border-radius:2px
+}
+
+.share-link:hover,
+.copy-link-button:hover{
+  background:var(--yellow);
+  color:var(--ink)
+}
+
+.share-status{
+  color:var(--yellow);
+  font-size:11px;
+  font-weight:900;
+  min-width:72px
 }
 
 /* CURTIDAS */
@@ -416,13 +476,70 @@ footer{
 <div class="nav">
 
 <div>
-  <div class="logo">
-    BOLSOTRALHA
-  </div>
 
-  <div class="edition-date">
-    EDIÇÃO DE 03 DE OUTUBRO DE 2026
-  </div>
+<div class="logo">
+BOLSOTRALHA
+</div>
+
+<div class="edition-date" id="accessDate">
+—
+</div>
+
+<div class="header-share" aria-label="Compartilhar Bolsotralha">
+
+<span class="header-share-label">
+COMPARTILHE:
+</span>
+
+<a
+id="whatsappShare"
+class="share-link"
+href="#"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Compartilhar no WhatsApp"
+>
+WhatsApp
+</a>
+
+<a
+id="instagramShare"
+class="share-link"
+href="https://www.instagram.com/"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Compartilhar no Instagram"
+>
+Instagram
+</a>
+
+<a
+id="facebookShare"
+class="share-link"
+href="#"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Compartilhar no Facebook"
+>
+Facebook
+</a>
+
+<button
+id="copyLinkButton"
+class="copy-link-button"
+type="button"
+>
+COPIAR LINK
+</button>
+
+<span
+id="shareStatus"
+class="share-status"
+aria-live="polite"
+></span>
+
+</div>
+
 </div>
 
 <nav>
@@ -479,9 +596,6 @@ ela aparece em uma área separada, com contexto e fonte.
 
 </section>
 
-
-<!-- CURTIR -->
-
 <section class="like-section" aria-label="Curtir Bolsotralha">
 
 <button
@@ -499,7 +613,6 @@ type="button"
 </div>
 
 </section>
-
 
 <section class="section" id="familia">
 
@@ -549,7 +662,6 @@ O primogênito da família e senador pelo Rio de Janeiro.
 
 </div>
 
-
 <div class="card">
 
 <div class="num">02</div>
@@ -564,7 +676,6 @@ O segundo filho, vereador do Rio de Janeiro.
 
 </div>
 
-
 <div class="card">
 
 <div class="num">03</div>
@@ -578,7 +689,6 @@ O terceiro filho e ex-deputado federal por São Paulo.
 <span class="tag">PERSONAGEM</span>
 
 </div>
-
 
 <div class="card">
 
@@ -597,7 +707,6 @@ O filho mais novo, vereador de Balneário Camboriú.
 </div>
 
 </section>
-
 
 <section class="section" id="galeria">
 
@@ -637,7 +746,6 @@ Publicado em 03 de outubro de 2026
 
 </section>
 
-
 <section class="section" id="fatos">
 
 <span class="burst">
@@ -655,7 +763,6 @@ conferir informações públicas.
 </p>
 
 <div class="facts">
-
 
 <div class="fact">
 
@@ -681,7 +788,6 @@ Fonte: Senado Federal ↗
 </div>
 
 </div>
-
 
 <div class="fact">
 
@@ -709,7 +815,6 @@ Fonte: Câmara Municipal do Rio de Janeiro ↗
 
 </div>
 
-
 <div class="fact">
 
 <h3>
@@ -734,7 +839,6 @@ Fonte: Câmara dos Deputados ↗
 </div>
 
 </div>
-
 
 <div class="fact">
 
@@ -772,11 +876,9 @@ Contexto: UOL ↗
 
 </div>
 
-
 </div>
 
 </section>
-
 
 <section class="section" id="sobre">
 
@@ -802,7 +904,6 @@ O objetivo é comentar a vida pública por meio de humor e linguagem de quadrinh
 
 </main>
 
-
 <footer>
 
 <div
@@ -820,8 +921,103 @@ aria-live="polite"
 
 </footer>
 
+<script>
 
-<!-- CONTADOR DE VISITANTES -->
+(function () {
+
+const accessDate =
+document.getElementById("accessDate");
+
+const today = new Date();
+
+const formattedDate =
+today.toLocaleDateString("pt-BR", {
+day:"2-digit",
+month:"long",
+year:"numeric"
+}).toUpperCase();
+
+accessDate.textContent =
+formattedDate;
+
+const whatsappShare =
+document.getElementById("whatsappShare");
+
+const instagramShare =
+document.getElementById("instagramShare");
+
+const facebookShare =
+document.getElementById("facebookShare");
+
+const copyLinkButton =
+document.getElementById("copyLinkButton");
+
+const shareStatus =
+document.getElementById("shareStatus");
+
+const pageUrl =
+window.location.href.split("#")[0];
+
+const shareText =
+"Bolsotralha — sátira política em formato de gibi.";
+
+whatsappShare.href =
+"https://wa.me/?text=" +
+encodeURIComponent(
+shareText + " " + pageUrl
+);
+
+facebookShare.href =
+"https://www.facebook.com/sharer/sharer.php?u=" +
+encodeURIComponent(pageUrl);
+
+instagramShare.addEventListener(
+"click",
+async function(){
+
+try{
+
+await navigator.clipboard.writeText(
+pageUrl
+);
+
+shareStatus.textContent =
+"Link copiado!";
+
+}catch(error){
+
+shareStatus.textContent =
+"Copie o link manualmente.";
+
+}
+
+});
+
+copyLinkButton.addEventListener(
+"click",
+async function(){
+
+try{
+
+await navigator.clipboard.writeText(
+pageUrl
+);
+
+shareStatus.textContent =
+"Link copiado!";
+
+}catch(error){
+
+shareStatus.textContent =
+"Não foi possível copiar.";
+
+}
+
+});
+
+})();
+
+</script>
 
 <script>
 
@@ -831,22 +1027,25 @@ const SUPABASE_URL =
 "https://lmipqyajmzmqnrkktuhp.supabase.co";
 
 const SUPABASE_KEY =
-"sb_publishable_Be6JQfGEb7FJ77p91NXR9g_7UWx2WZw";
+"sb_publishable_Be6JQfGEb7F77p91NXR9g_7UWx2WZw";
 
 const countEl =
 document.getElementById("visitorCount");
 
+async function callRpc(functionName){
 
-async function callRpc(functionName) {
-
-const response = await fetch(
-SUPABASE_URL + "/rest/v1/rpc/" + functionName,
+const response =
+await fetch(
+SUPABASE_URL +
+"/rest/v1/rpc/" +
+functionName,
 {
 method:"POST",
 
 headers:{
 "apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + SUPABASE_KEY,
+"Authorization":"Bearer " +
+SUPABASE_KEY,
 "Content-Type":"application/json"
 },
 
@@ -857,7 +1056,8 @@ body:"{}"
 if(!response.ok){
 
 throw new Error(
-"Supabase RPC error: " + response.status
+"Supabase RPC error: " +
+response.status
 );
 
 }
@@ -865,7 +1065,6 @@ throw new Error(
 return response.json();
 
 }
-
 
 async function updateVisitorCounter(){
 
@@ -876,17 +1075,26 @@ const visitKey =
 
 if(!localStorage.getItem(visitKey)){
 
-await callRpc("increment_visitor_count");
+await callRpc(
+"increment_visitor_count"
+);
 
-localStorage.setItem(visitKey,"1");
+localStorage.setItem(
+visitKey,
+"1"
+);
 
 }
 
 const count =
-await callRpc("get_visitor_count");
+await callRpc(
+"get_visitor_count"
+);
 
 countEl.textContent =
-Number(count).toLocaleString("pt-BR");
+Number(count).toLocaleString(
+"pt-BR"
+);
 
 }catch(error){
 
@@ -895,21 +1103,18 @@ console.warn(
 error
 );
 
-countEl.textContent="—";
+countEl.textContent =
+"—";
 
 }
 
 }
-
 
 updateVisitorCounter();
 
 })();
 
 </script>
-
-
-<!-- CONTADOR DE CURTIDAS -->
 
 <script>
 
@@ -933,18 +1138,20 @@ document.getElementById("likeCount");
 const likeKey =
 "bolsotralha_liked_v1";
 
-
 async function callLikeRpc(functionName){
 
 const response =
 await fetch(
-SUPABASE_URL + "/rest/v1/rpc/" + functionName,
+SUPABASE_URL +
+"/rest/v1/rpc/" +
+functionName,
 {
 method:"POST",
 
 headers:{
 "apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + SUPABASE_KEY,
+"Authorization":"Bearer " +
+SUPABASE_KEY,
 "Content-Type":"application/json"
 },
 
@@ -955,7 +1162,8 @@ body:"{}"
 if(!response.ok){
 
 throw new Error(
-"Supabase RPC error: " + response.status
+"Supabase RPC error: " +
+response.status
 );
 
 }
@@ -964,22 +1172,30 @@ return response.json();
 
 }
 
-
 async function loadLikeCount(){
 
 try{
 
 const count =
-await callLikeRpc("get_like_count");
+await callLikeRpc(
+"get_like_count"
+);
 
 likeCount.textContent =
-Number(count).toLocaleString("pt-BR");
+Number(count).toLocaleString(
+"pt-BR"
+);
 
-if(localStorage.getItem(likeKey)){
+if(
+localStorage.getItem(likeKey)
+){
 
-likeButton.classList.add("liked");
+likeButton.classList.add(
+"liked"
+);
 
-likeLabel.textContent="Curtido";
+likeLabel.textContent =
+"Curtido";
 
 }
 
@@ -990,36 +1206,51 @@ console.warn(
 error
 );
 
-likeCount.textContent="—";
+likeCount.textContent =
+"—";
 
 }
 
 }
-
 
 likeButton.addEventListener(
 "click",
 async function(){
 
-if(localStorage.getItem(likeKey)){
+if(
+localStorage.getItem(likeKey)
+){
+
 return;
+
 }
 
-likeButton.disabled=true;
+likeButton.disabled =
+true;
 
 try{
 
 const count =
-await callLikeRpc("increment_like_count");
+await callLikeRpc(
+"increment_like_count"
+);
 
 likeCount.textContent =
-Number(count).toLocaleString("pt-BR");
+Number(count).toLocaleString(
+"pt-BR"
+);
 
-localStorage.setItem(likeKey,"1");
+localStorage.setItem(
+likeKey,
+"1"
+);
 
-likeButton.classList.add("liked");
+likeButton.classList.add(
+"liked"
+);
 
-likeLabel.textContent="Curtido";
+likeLabel.textContent =
+"Curtido";
 
 }catch(error){
 
@@ -1030,19 +1261,18 @@ error
 
 }finally{
 
-likeButton.disabled=false;
+likeButton.disabled =
+false;
 
 }
 
 });
-
 
 loadLikeCount();
 
 })();
 
 </script>
-
 
 </body>
 </html>
